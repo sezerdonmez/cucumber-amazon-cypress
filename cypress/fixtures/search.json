@@ -1,0 +1,5 @@
+{
+    "searchInput" : "[id='twotabsearchtextbox']",
+    "findButton" : "[id='nav-search-submit-button']",
+    "searchInfo" : ".a-color-state"
+}

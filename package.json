@@ -1,0 +1,23 @@
+{
+    "name": "cucumber-amazon-cypress",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:tests": "cypress run"
+  },
+  "keywords": [],
+  "author": "Sezer Donmez",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.2.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "prettier": "2.5.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
