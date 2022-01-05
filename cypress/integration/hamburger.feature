@@ -25,7 +25,7 @@ Feature: Hamburger Menu
         And I click 'show all' button
         Then I should see that the 'show less' button
 
-    Scenario: View Full Category Names With Using Hamburger Menu From Homepage
+    Scenario: Check If Hamburger Menu Show More And Show Less Buttons Working Correctly From Homepage
         Given I open home page
         And I accept cookies
         When I click hamburger menu
