@@ -1,7 +1,7 @@
 Feature: Search Keyword
 
     As a valid user
-    I want to search a keyword
+    I want to search keywords and categories
 
     Scenario: Search Keyword With Find Button From Homepage
         Given I open home page

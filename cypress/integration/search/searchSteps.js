@@ -1,6 +1,6 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
-// var search = require ('./fixtures/search.json')
+// var search = require ("../cypress/fixtures/search.json")
 
 Given ('I open home page', () => {
     cy.visitUrlTitleInclude('/', 'Amazon.com.tr')
@@ -46,6 +46,3 @@ Then ('I should see that the {string} category page', category => {
     cy.checkIfElementContainsText('.fst-h1-st h1', category)
     cy.checkDropdownBoxSelected('[id="searchDropdownBox"]', category)
 })
-
-
-

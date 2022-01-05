@@ -16,6 +16,12 @@ Cypress.Commands.add('clickElement', (locator) => {
         .click()
 })
 
+Cypress.Commands.add('clickElementWithText', (locator, text) => {
+    cy.get(locator)
+        .contains(text)
+        .click()
+})
+
 Cypress.Commands.add('clickChildElementWithText', (locator, childTag, text) => {
     cy.get(locator)
         .children(childTag)
@@ -62,6 +68,11 @@ Cypress.Commands.add('pressKey', (locator, key) => {
 Cypress.Commands.add('checkIfElementContainsText', (locator, text) => {
     cy.get(locator)
         .should('contain', text)
+})
+
+Cypress.Commands.add('shouldVisible', (locator) => {
+    cy.get(locator)
+        .should('be.visible')
 })
 
 Cypress.Commands.add('shouldNotVisible', (locator) => {
