@@ -1,6 +1,6 @@
 
 
-## Sample Cucumber BDD Tool Project with Cypress.io
+## Sample Cucumber BDD Framework Project with Cypress.io
 
 At the command prompt, type <code> npm run cy:open</code> for open Cypress.io's Debugger.
 
