@@ -1,8 +1,8 @@
 {
-    "name": "cucumber-amazon-cypress",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+  "name": "cucumber-amazon-cypress",
+  "version": "1.0.0",
+  "description": "At the command prompt, type <code> npm run cy:open</code> for open Cypress.io's Debugger.",
+  "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
     "cy:tests": "cypress run"
@@ -19,5 +19,13 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sezerieee/cucumber-amazon-cypress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sezerieee/cucumber-amazon-cypress/issues"
+  },
+  "homepage": "https://github.com/sezerieee/cucumber-amazon-cypress#readme"
 }

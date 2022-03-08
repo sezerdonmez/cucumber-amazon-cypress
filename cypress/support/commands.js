@@ -11,8 +11,21 @@ Cypress.Commands.add('checkTitleInclude', title => {
         .should('include', title)
 })
 
+Cypress.Commands.add('hoverMouseToElementInList', (element, index, assertElement) => {
+    cy.get(element)
+        .eq(index)
+        .trigger('mouseover')
+    cy.shouldVisible(assertElement)
+})
+
 Cypress.Commands.add('clickElement', (locator) => {
     cy.get(locator)
+        .click()
+})
+
+Cypress.Commands.add('clickElementInList', (locator, index) => {
+    cy.get(locator)
+        .eq(index)
         .click()
 })
 
@@ -75,14 +88,26 @@ Cypress.Commands.add('shouldVisible', (locator) => {
         .should('be.visible')
 })
 
+Cypress.Commands.add('shouldVisibleWithText', (text) => {
+    cy.get('body')
+        .contains(text)
+        .should('be.visible')
+})
+
 Cypress.Commands.add('shouldNotVisible', (locator) => {
     cy.get(locator)
-        .should('not.be.visible', locator)
+        .should('not.be.visible')
+})
+
+Cypress.Commands.add('shouldNotVisibleWithText', (text) => {
+    cy.get('body')
+        .contains(text)
+        .should('not.be.visible')
 })
 
 Cypress.Commands.add('shouldNotExist', (locator) => {
     cy.get(locator)
-        .should('not.be.exist', locator)
+        .should('not.exist')
 })
 
 

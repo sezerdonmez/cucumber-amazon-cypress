@@ -1,22 +1,23 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+var hamburger = require('../hamburger/hamburger.json')
 
 Given ('I open home page', () => {
-    cy.visitUrlTitleInclude('/', 'Amazon.com.tr')
+    cy.visitUrlTitleInclude('/', hamburger.homepageTitle)
 })
 
 When ('I click hamburger menu', () => {
-    cy.clickElement('#nav-hamburger-menu')
-    cy.shouldVisible('#hmenu-customer-name')
+    cy.clickElement(hamburger.hamburgerMenu)
+    cy.shouldVisible(hamburger.hamburgerUserName)
 })
 
 And ('I click {string} on hamburger menu', text => {
-    cy.clickElementWithText('.hmenu-item', text)
+    cy.clickElementWithText(hamburger.hamburgerItemList, text)
 })
 
 And ('I click {string} on {string} category menu', (childCategory, mainCategory) => {
-    cy.shouldVisible('[aria-label="Back to ana menü"]')
-    cy.checkIfElementContainsText('.hmenu-item', mainCategory)
-    cy.clickElementWithText('.hmenu-item', childCategory)
+    cy.shouldVisible(hamburger.hamburgerBackMainMenu)
+    cy.checkIfElementContainsText(hamburger.hamburgerItemList, mainCategory)
+    cy.clickElementWithText(hamburger.hamburgerItemList, childCategory)
 })
 
 And ('I accept cookies', () => {
@@ -26,25 +27,25 @@ And ('I accept cookies', () => {
 
 And ('I click {string} button', (showOption) => {
     if (showOption === 'show all') {
-        cy.clickElementWithText('.hmenu-item', 'tümünü görüntüle')
+        cy.clickElementWithText(hamburger.hamburgerItemList, 'tümünü görüntüle')
     } else {
-        cy.clickElementWithText('.hmenu-item', 'daha az görüntüle')
+        cy.clickElementWithText(hamburger.hamburgerItemList, 'daha az görüntüle')
     }
 })
 
 Then ('I should see that the {string} page', (pageName) => {
-    cy.checkIfElementContainsText('#zg_banner_text', pageName)
+    cy.checkIfElementContainsText(hamburger.highlightsHeaderText, pageName)
 })
 
 Then ('I should see that the {string} category page', category => {
-    cy.checkIfElementContainsText('.fst-h1-st h1', category)
-    cy.checkDropdownBoxSelected('[id="searchDropdownBox"]', category)
+    cy.checkIfElementContainsText(hamburger.categoryPageHeader, category)
+    cy.checkDropdownBoxSelected(hamburger.searchCategoryDropdown, category)
 })
 
 Then ('I should see that the {string} button', (showOption) => {
     if (showOption === 'show all') {
-        cy.checkIfElementContainsText('.hmenu-item', 'tümünü görüntüle')
+        cy.checkIfElementContainsText(hamburger.hamburgerItemList, 'tümünü görüntüle')
     } else {
-        cy.checkIfElementContainsText('.hmenu-item', 'daha az görüntüle')
+        cy.checkIfElementContainsText(hamburger.hamburgerItemList, 'daha az görüntüle')
     }
 })

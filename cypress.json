@@ -3,7 +3,7 @@
     "defaultCommandTimeout": 10000,
     "pageLoadTimeout": 10000,
     "baseUrl": "https://www.amazon.com.tr/",
-    "ignoreTestFiles": ["*.js", "*.md"],
+    "ignoreTestFiles": ["*.js", "*.md", "*.json"],
     "viewportHeight": 1080,
     "viewportWidth": 1920
 } 

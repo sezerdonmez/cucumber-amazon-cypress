@@ -1,0 +1,10 @@
+{
+  "homepageTitle": "Amazon.com.tr",
+  "hamburgerMenu": "#nav-hamburger-menu",
+  "hamburgerUserName": "#hmenu-customer-name",
+  "hamburgerItemList": ".hmenu-item",
+  "hamburgerBackMainMenu": "[aria-label='Back to ana menü']",
+  "searchCategoryDropdown": "#searchDropdownBox",
+  "categoryPageHeader": ".fst-h1-st h1",
+  "highlightsHeaderText": "#zg_banner_text" 
+}
